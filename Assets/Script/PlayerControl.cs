@@ -43,5 +43,13 @@ public class PlayerControl : MonoBehaviour
         {
             PlayerAnim.SetBool("DownKey",false);
         }
+        if(Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            PlayerAnim.SetBool("RightKey",false);
+        }
+        if(Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            PlayerAnim.SetBool("LeftKey",false);
+        }
     }
 }
