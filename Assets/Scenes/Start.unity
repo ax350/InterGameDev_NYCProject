@@ -349,6 +349,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6275279910575461169, guid: 35117ca7a956ded48becb76ccbdd9150,
+        type: 3}
+      propertyPath: UI_coin
+      value: 
+      objectReference: {fileID: 5976431839302461255, guid: e68e0342ee9b29646966374ef27aa16e,
+        type: 3}
+    - target: {fileID: 6275279910575461169, guid: 35117ca7a956ded48becb76ccbdd9150,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6275279910575461170, guid: 35117ca7a956ded48becb76ccbdd9150,
         type: 3}
       propertyPath: m_Name
