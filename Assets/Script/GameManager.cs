@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private Vector3 camera_original_pos;
 
     public bool mainSceneLoaded = false;
+    Boolean manual_start = false;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
             Debug.Log(camera_original_pos);
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
+                Debug.Log("0");
                 camera.GetComponent<Transform>().transform.position = new Vector3(
                     player.GetComponent<Transform>().transform.position.x,
                     player.GetComponent<Transform>().transform.position.y,
@@ -58,6 +60,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (mainSceneLoaded && !manual_start)
+        {  
+            manual_start = true;
+            coin_count = 0;
+            camera_original_pos = camera.GetComponent<Transform>().transform.position;
+            Debug.Log(camera_original_pos);
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                Debug.Log("0");
+                camera.GetComponent<Transform>().transform.position = new Vector3(
+                    player.GetComponent<Transform>().transform.position.x,
+                    player.GetComponent<Transform>().transform.position.y,
+                    camera.GetComponent<Transform>().transform.position.z);
+                camera.GetComponent<Camera>().orthographicSize = 1;
+            }
+        }
+
         if (mainSceneLoaded)
         {
 
@@ -67,22 +87,25 @@ public class GameManager : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
+                        Debug.Log("1");
                         camera.GetComponent<Transform>().transform.position = camera_original_pos;
                         camera.GetComponent<Camera>().orthographicSize = 5;
                         camera_zoom = false;
                     }
                     else
                     {
+                        Debug.Log("2");
                         camera.GetComponent<Transform>().transform.position = new Vector3(
-                            player.GetComponent<Transform>().transform.position.x,
-                            player.GetComponent<Transform>().transform.position.y,
-                            camera.GetComponent<Transform>().transform.position.z);
+                        player.GetComponent<Transform>().transform.position.x,
+                        player.GetComponent<Transform>().transform.position.y,
+                        camera.GetComponent<Transform>().transform.position.z);
                     }
                 }
                 else if (!camera_zoom)
                 {
                     if (!Input.GetKey(KeyCode.Space))
                     {
+                    Debug.Log("3");
                         camera_zoom = true;
                         camera.GetComponent<Transform>().transform.position = new Vector3(
                             player.GetComponent<Transform>().transform.position.x,

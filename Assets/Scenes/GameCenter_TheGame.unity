@@ -15385,10 +15385,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256d2ee46fc2a4b0f9e5126339633853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: {fileID: 0}
-  player: {fileID: 0}
-  camera: {fileID: 0}
-  UI_coin: {fileID: 0}
+  coins: {fileID: 5976431838815999898}
+  player: {fileID: 2072270720}
+  camera: {fileID: 519420028}
+  UI_coin: {fileID: 1029246025}
 --- !u!4 &1247227543
 Transform:
   m_ObjectHideFlags: 0
@@ -26494,7 +26494,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -3994744024693093290, guid: e1d6d7d79becbb5458fd2d7c55c25638,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -27753,3 +27753,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68e0342ee9b29646966374ef27aa16e, type: 3}
+--- !u!1 &5976431838815999898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5976431839302461255, guid: e68e0342ee9b29646966374ef27aa16e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5976431838815999897}
+  m_PrefabAsset: {fileID: 0}
